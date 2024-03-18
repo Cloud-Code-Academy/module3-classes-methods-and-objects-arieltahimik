@@ -39,7 +39,10 @@ public with sharing class ClassesObjectsMethods {
      * @return A list containing the length of the string, a substring of the string, and the string in lower case.
      */
     public static List<String> practiceStringMethods() {
+        List<String> stringInfo = new List<String>();
+
         // Initialize a String with 'Hello, Salesforce!'
+        String myString = 'Hello, Salesforce!';
         
         // Get the length of the String        
         // Get a substring of the String of the first 5 characters
@@ -47,10 +50,12 @@ public with sharing class ClassesObjectsMethods {
         
         // Return the list with the string data
         // In the first position add the string length
+        stringInfo.add(String.valueOf(myString.length()));
         // In the second position add the substring
+        stringInfo.add(myString.substring(0,5));
         // In the third position add the string in lower case
-
-        return null; // Replace null with the variable you used to store the result
+        stringInfo.add(myString.toLowerCase());
+        return stringInfo;
     }
 
     /**
