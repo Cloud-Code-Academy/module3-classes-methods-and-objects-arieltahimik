@@ -290,11 +290,11 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String createAndGetBookDetails() {
         // Create a Book object with title "A Brief History of Time" and author "Stephen Hawking"
+        Book testBook = new Book('A Brief History of Time', 'Stephen Hawking');
 
         // Call the getBookDetails method on the book object to get the details of the book
-
         // Return the details of the book
-        return null; // Replace null with the variable you used to store the result
+        return testBook.getBookDetails();
     }
 
     /**
