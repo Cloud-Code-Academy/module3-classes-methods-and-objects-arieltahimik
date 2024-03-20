@@ -224,13 +224,16 @@ public with sharing class ClassesObjectsMethods {
     public static String getDayOfWeek(DateTime dt) {
         // Define a map of day of the week as a key and day number as the value
         // Monday = 1, Tuesday = 2, etc.
-
-        // Get the day name using .format('EEEE');
-
-        // Get the day number from the map using the day name
-
-        // Return the result as a string
-        return null; // Replace null with the variable you used to store the result
+        Map<String, Integer> dayOfWeekMap = new Map<String, Integer>{
+            'Monday' => 1,
+            'Tuesday' => 2,
+            'Wednesday' => 3,
+            'Thursday' => 4,
+            'Friday' => 5,
+            'Saturday' => 6,
+            'Sunday' => 7
+        };
+        return String.valueOf(dayOfWeekMap.get(dt.format('EEEE')));
     }
 
 
