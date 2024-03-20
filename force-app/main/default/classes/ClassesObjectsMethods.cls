@@ -198,9 +198,8 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer generateRandomNumber() {
         // Use Math class to generate number between 50 and 100
-
         // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+        return (Integer)((Math.random() * 51) + 50); // Replace null with the variable you used to store the result
     }
 
     /**
