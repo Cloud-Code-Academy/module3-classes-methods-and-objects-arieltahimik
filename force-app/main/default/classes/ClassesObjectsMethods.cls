@@ -90,6 +90,7 @@ public with sharing class ClassesObjectsMethods {
      */
     public static String removeDuplicateWords(String sentence) {
         List<String> words = new List<String>();
+        String s;
         
         // Split the sentence into words
         words = sentence.split(' ');        
@@ -101,12 +102,22 @@ public with sharing class ClassesObjectsMethods {
         uniqueWords.addAll(words);        
 
         // Join the unique words back into a sentence
-        words.clear();
-        words.addAll(uniqueWords);
-        sentence = String.join(words, ' ');
+        
+        // Version 1
+        // words.clear();
+        // words.addAll(uniqueWords);
+        // s = String.join(words, ' ');
+
+        // Version 2
+        // Use Type Casting (Iterable<T>) and type cast uniqueWords SET
+        // s = String.join((Iterable<String>)uniqueWords, ' ');
+
+        // Version 3
+        // Update <apiVersion> to 58 and above
+        s = String.join(uniqueWords, ' ');
         
         // Return the sentence with unique words
-        return sentence; // Replace null with the variable you used to store the result
+        return s;
     }
 
     /**
