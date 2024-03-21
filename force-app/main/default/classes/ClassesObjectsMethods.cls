@@ -455,6 +455,6 @@ public with sharing class ClassesObjectsMethods {
      * @return The Person object of the older person.
      */
     public static Person getOlderPerson(Person person1, Person person2) {
-        return null; // Replace null with the variable you used to store the result
+        return person1.getAge() >= person2.getAge() ? person1 : person2;
     }
 }
